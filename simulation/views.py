@@ -3,10 +3,17 @@ from django.shortcuts import render, redirect, get_object_or_404
 # Create your views here.
 
 from .forms import *
+# list = [
+#
+# ]
+
 
 
 def index(request):
     return render(request, 'inv/index.html')
+
+def start(request):
+    return render(request, 'inv/project_start.html')
 
 def display_successFactor(request):
     items = SuccessFactor.objects.all()

@@ -3,7 +3,8 @@ from .views import *
 
 urlpatterns = [
     url(r'^$', index, name='index'),
-    url(r'^start', display_successFactor, name="display_successFactor"),
+    url(r'^start', start, name='start'),
+    url(r'^success', display_successFactor, name="display_successFactor"),
     url(r'^performanceIndicator$', display_performanceIndicator, name="display_performanceIndicator"),
 
     url(r'^add_successFactors$', add_successFactor, name="add_successFactor"),
