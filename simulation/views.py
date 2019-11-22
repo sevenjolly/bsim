@@ -3,17 +3,28 @@ from django.shortcuts import render, redirect, get_object_or_404
 # Create your views here.
 
 from .forms import *
-# list = [
-#
-# ]
+# csf_name = ["Introducing an individually controlled brand (utilization in %)", "Retention of Critical Technology Personnel",
+#             "Retention of Critical Marketing Personnel"]
 
 
 
 def index(request):
     return render(request, 'inv/index.html')
 
+def title(request):
+    return render(request, 'inv/title_page.html')
+
 def start(request):
     return render(request, 'inv/project_start.html')
+
+def mktg(request):
+    return render(request, 'inv/mktg_mgt.html')
+
+def oper(request):
+    return render(request, 'inv/oper_mgt.html')
+
+def inn(request):
+    return render(request, 'inv/inn_mgt.html')
 
 def display_successFactor(request):
     items = SuccessFactor.objects.all()

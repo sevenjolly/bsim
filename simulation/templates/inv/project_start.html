@@ -1,8 +1,9 @@
 {% extends 'inv/base.html' %}
 
 {% block body %}
-<h4><span style="background-color: #ff9900; color: #ffffff;">1 OVERALL BUSINESS PARAMETERS OF THE PROJECT (BUSINESS UNIT: next 36 MONTHS OF OPERATION)</span></h4>
-<h4><span style="color: #000000;">1.1 Critical Success Factors</span></h4>
+ <h4><span style="background-color: #ff9900; color: #ffffff;">1 OVERALL BUSINESS PARAMETERS OF THE PROJECT (BUSINESS UNIT: next 36 MONTHS OF OPERATION)</span></h4>
+ <h4><span style="color: #000000;">1.1 Critical Success Factors</span></h4>
+
 <table style="height: 154px; width: 936px; background-color: #ffffff;" border="2">
 <tbody>
 <tr>
@@ -143,8 +144,7 @@
 <td></td>
 <td></td>
 <td></td>
-<td style="background-color: #ffff00; text-align: center; width: 119px;">
-<div contenteditable="true">220.00%</div>
+<td style="text-align: center; width: 119px;"><input style="width:70px" type="number" id="fy_2" value=220%"></td>
 </td>
 </tr>
 <tr>
@@ -250,4 +250,6 @@
 <p>&nbsp;</p>
 <p><button style="border-color: green; border-radius: 8px;"><span style="font-size: xx-small;">Submit Result</span></button>&nbsp; &nbsp;<button style="border-color: orange; border-radius: 8px;"><span style="font-size: xx-small;">Go Back to Sim-Navigator</span></button></p>
 <p></p>
+
+
 {% endblock %}
