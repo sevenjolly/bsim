@@ -1,0 +1,59 @@
+{% extends 'inv/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+
+        <h4 class="font-weight-bold">Register</h4>
+
+        <div class="form-group row">
+            <table class="table table-borderless">
+                <tr>
+                    <td><label class="col-5 col-form-label">Semester</label></td>
+                    <td><label class="col-5 col-form-label">Fall 2019</label></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td><label class="col-5 col-form-label">Advisor</label></td>
+                    <td><label class="col-5 col-form-label">Dr. Vladimir Zlatev</label></td>
+                </tr>
+                <tr>
+                    <td><label class="col-5 col-form-label">Title</label></td>
+                    <td><input type="text" name="title" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label class="col-5 col-form-label">Location</label></td>
+                    <td><input type="text" name="location" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label class="col-5 col-form-label">User Name</label></td>
+                    <td><input type="text" name="username" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label class="col-5 col-form-label">Email</label></td>
+                    <td><input type="email" name="email" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><label class="col-5 col-form-label">Password</label></td>
+                    <td><input type="password" name="password" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="form-group row">
+                            <div class="offset-m-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

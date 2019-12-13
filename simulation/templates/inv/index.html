@@ -1,68 +1,68 @@
 {% extends 'inv/base.html' %}
 
 {% block body %}
- <h4>Overall business parameters of the project(Business unit : next 36 month operation)</h4>
+<h4>Overall business parameters of the project(Business unit : next 36 month operation)</h4>
 
-  <div class="add_buttons">
+<div class="add_buttons">
 
     <div class="button-group">
-      <a href="{% url 'display_successFactor' %}" class="btn btn-primary btn-md btn-trim" role="button"> Critical Success Factors</a>
-      <a href="{% url 'add_successFactor' %}" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
+        <a href="{% url 'display_successFactor' %}" class="btn btn-primary btn-md btn-trim" role="button"> Critical
+            Success Factors</a>
+        <a href="{% url 'add_successFactor' %}" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
 
-      <a href="{% url 'display_performanceIndicator' %}" class="btn btn-primary btn-md btn-trim" role="button"> Key Performance Indicators</a>
-      <a href="{% url 'add_performanceIndicator' %}" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
+        <a href="{% url 'display_performanceIndicator' %}" class="btn btn-primary btn-md btn-trim" role="button"> Key
+            Performance Indicators</a>
+        <a href="{% url 'add_performanceIndicator' %}" class="btn btn-warning btn-sm btn-pad" role="button"> +</a>
 
     </div>
 
-  </div>
+</div>
 
-
-
-  <table class="table table-hovered">
+<table class="table table-hovered">
     <thead>
-      <tr>
-         <th>No.</th>
-         <th>Name</th>
-         <th>Unit</th>
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Unit</th>
         <th>FY-0</th>
         <th>FY-1</th>
         <th>FY-2</th>
         <th>FY-3</th>
         <th>FY-1+FY-2+FY3</th>
-      </tr>
+    </tr>
     </thead>
 
     <tbody>
 
-      {% for item in items %}
+    {% for item in items %}
 
-      <tr>
+    <tr>
         <td>{{ item.pk }}</td>
-         <td width="500">{{ item.name }}</td>
-         <td>{{ item.unit }}</td>
-          <td><input style="width:70px" type="number" id="fy_0" value="{{item.fy_0}}"></td>
-         <td><input style="width:70px" type="number" id="fy_1" value="{{item.fy_1}}"></td>
-           <td><input style="width:70px" type="number" id="fy_2" value="{{item.fy_2}}"></td>
-           <td><input style="width:70px" type="number" id="fy_3" value="{{item.fy_3}}"></td>
-           <td><input style="width:70px" type="number" id="fy_combined" value="{{item.fy_combined}}"></td>
-
+        <td >{{ item.name }}</td>
+        <td>{{ item.unit }}</td>
+        <td><input style="width:70px" type="number" id="fy_0" value="{{item.fy_0}}"></td>
+        <td><input style="width:70px" type="number" id="fy_1" value="{{item.fy_1}}"></td>
+        <td><input style="width:70px" type="number" id="fy_2" value="{{item.fy_2}}"></td>
+        <td><input style="width:70px" type="number" id="fy_3" value="{{item.fy_3}}"></td>
+        <td><input style="width:70px" type="number" id="fy_combined" value="{{item.fy_combined}}"></td>
 
         {% if header|lower == "laptops" %}
         <td>
-            <a href="{% url 'edit_successFactor' item.pk %}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" > Edit</a>
+            <a href="{% url 'edit_successFactor' item.pk %}" class="btn btn-warning btn-sm" role="button"
+               aria-pressed="true"> Edit</a>
         </td>
         {% elif header|lower == "desktops" %}
         <td>
-            <a href="{% url 'edit_performanceIndicator' item.pk %}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" > Edit</a>
+            <a href="{% url 'edit_performanceIndicator' item.pk %}" class="btn btn-warning btn-sm" role="button"
+               aria-pressed="true"> Edit</a>
         </td>
 
         {% endif %}
 
+    </tr>
 
-      </tr>
-
-      {% endfor %}
+    {% endfor %}
     </tbody>
-  </table>
+</table>
 
 {% endblock %}

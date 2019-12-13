@@ -40,7 +40,7 @@
 <td style="text-align: center;" ><input style="text-align: center; width:90px" type="number" id="cmp_1" value="1"></td>
 <td style="text-align: center;" ><input style="text-align: center; width:90px" type="number" id="cmp_2" value="1"></td>
 <td style="text-align: center;" ><input style="text-align: center; width:90px" type="number" id="cmp_3" value="1"></td>
-<td style="text-align: center;"><input style="text-align: center; width:90px" type="number" id="cmp_123" value="1"></td>
+<td style="text-align: center;"><input style="text-align: center; width:90px" type="number" id="cmp_123" value="2"></td>
 
 </tr>
 </tbody>
@@ -187,10 +187,17 @@
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
-<p><button style="border-color: green; border-radius: 8px;"><span style="font-size: xx-small;">Submit Result</span></button>&nbsp; &nbsp;
- <button style="border-color: orange; border-radius: 8px;"><span style="font-size: xx-small;">Go Back to Sim-Navigator</span></button></p>
-<p></p>
+<p> </p>
 
+
+<div class="add_buttons">
+    <div class="button-group">
+      <a href="{% url 'index' %}" class="btn btn-primary btn-md btn-trim" role="button"> Submit</a>
+            <a href="{% url 'index' %}" class="btn btn-primary btn-md btn-trim" role="button"> Go Back to Sim-Navigator</a>
+    </div>
+
+  </div>
+
+<p>&nbsp;</p>
 
 {% endblock %}

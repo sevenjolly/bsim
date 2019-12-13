@@ -7,12 +7,8 @@ from .forms import *
 #             "Retention of Critical Marketing Personnel"]
 
 
-
 def index(request):
     return render(request, 'inv/index.html')
-
-def title(request):
-    return render(request, 'inv/title_page.html')
 
 def start(request):
     return render(request, 'inv/project_start.html')
@@ -25,6 +21,9 @@ def oper(request):
 
 def inn(request):
     return render(request, 'inv/inn_mgt.html')
+
+def fin(request):
+    return render(request, 'inv/fin_mgt.html')
 
 def display_successFactor(request):
     items = SuccessFactor.objects.all()

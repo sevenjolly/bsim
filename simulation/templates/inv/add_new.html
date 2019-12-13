@@ -2,29 +2,29 @@
 
 {% block body %}
 
-  <div class="container">
+<div class="container">
     <form method="POST">
-      {% csrf_token %}
+        {% csrf_token %}
 
-      <h4>{{ header }}</h4>
+        <h4>{{ header }}</h4>
 
-      {% for field in form %}
-      <div class="form-group row">
-        <label for="id_{{ field.name }}" class="col-2 col-form-label">{{ field.label }}</label>
-        <div class="col-10">
-          {{ field }}
+        {% for field in form %}
+        <div class="form-group row">
+            <label for="id_{{ field.name }}" class="col-2 col-form-label">{{ field.label }}</label>
+            <div class="col-10">
+                {{ field }}
+            </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
 
-      <div class="form-group row">
-        <div class="offset-sm-2 col-sm-6">
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-6">
 
-          <button type="submit" class="btn btn-primary">Add Attribute</button>
+                <button type="submit" class="btn btn-primary">Add Attribute</button>
 
+            </div>
         </div>
-      </div>
     </form>
-  </div>
+</div>
 
 {% endblock %}
